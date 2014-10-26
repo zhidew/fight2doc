@@ -1,0 +1,1 @@
+1. When insert chat message %F0%9F%98%8A, crash.
