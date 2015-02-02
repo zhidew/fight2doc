@@ -1,0 +1,11 @@
+
+1. backup db: mysqldump --user=root -p fight2server > /www/fight2server/db_backup.2015.02.02
+2. upgrade: mysql -u root -p fight2server < /www/fight2server/database/Upgrade_20140201.sql --default-character-set = utf8 
+3. change java oom: 
+cat /proc/5156/oom_score
+root@AY1306161632507297d6Z:~# echo -1000 > /proc/5156/oom_score_adj
+
+
+(1)import to local:
+1 cd D:\Program Files\MySQL\MySQL Server 5.5\bin
+2 mysql -u root -p fight2server < db_backup.2015.02.02 --default-character-set=utf8 
